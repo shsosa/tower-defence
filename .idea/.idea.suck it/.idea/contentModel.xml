@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\gadisosa\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\gadisosa\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_suck it.-1207232039.00" t="ExcludeRecursive" />
+    <e p="E:\suck it" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CubeEditor.cs" t="Include" />
+        <e p="EnemyMovement.cs" t="Include" />
+        <e p="PathFinder.cs" t="Include" />
+        <e p="Waypoint.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="suck it.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
