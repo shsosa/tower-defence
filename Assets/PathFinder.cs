@@ -5,7 +5,7 @@ using UnityEngine;
 public class PathFinder : MonoBehaviour
 {
     [SerializeField] Waypoint startWaypoint, endWaypoint;
-
+   
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
     bool isRunning = true;
@@ -31,24 +31,29 @@ public class PathFinder : MonoBehaviour
     private void CalculatePath()
     {
         LoadBlocks();
-        ColorStartAndEnd();
+       
         BreadthFirstSearch();
         CreatePath();
     }
 
     private void CreatePath()
     {
-        path.Add(endWaypoint);
-
+        SetAsPath(endWaypoint);
         Waypoint previous = endWaypoint.exploredFrom;
         while (previous != startWaypoint)
         {
-            path.Add(previous);
+           SetAsPath(previous);
             previous = previous.exploredFrom;
         }
-
-        path.Add(startWaypoint);
+        
+        SetAsPath(startWaypoint);
         path.Reverse();
+    }
+
+    void SetAsPath(Waypoint waypoint)
+    {
+        path.Add(waypoint);
+        waypoint.isPlaceble = false;
     }
 
     private void BreadthFirstSearch()
@@ -101,12 +106,7 @@ public class PathFinder : MonoBehaviour
         }
     }
 
-    private void ColorStartAndEnd()
-    {
-        // todo consdier moving out
-        startWaypoint.SetTopColor(Color.green);
-        endWaypoint.SetTopColor(Color.red);
-    }
+   
 
     private void LoadBlocks()
     {

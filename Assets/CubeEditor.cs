@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [ExecuteInEditMode]
@@ -39,6 +40,8 @@ public class CubeEditor : MonoBehaviour
         textMesh.text = labelText;
         gameObject.name = labelText;
     }
+
+  
 }
 
 

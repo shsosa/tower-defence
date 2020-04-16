@@ -7,8 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     // Use this for initialization
 
-    [SerializeField] int hitPOints =3;
-  
+   
     private List<Waypoint> calculatedPath;
 
     void Start()
@@ -38,17 +37,5 @@ public class EnemyMovement : MonoBehaviour
     }
 
    
-    private void OnParticleCollision(GameObject other)
-    {
-        ProcessHit();
-    }
-
-    private void ProcessHit()
-    {
-        hitPOints -= 1;
-        SendMessage("HitParticles");
-        print(hitPOints);
-        if (hitPOints == 0)
-            Destroy(gameObject);
-    }
+   
 }

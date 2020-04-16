@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ColisionHendler : MonoBehaviour
 {
-    private ParticleSystem hitParticles;
+    
+    [SerializeField] ParticleSystem hitParticles;
     void Start()
     {
-        hitParticles = GetComponentInChildren<ParticleSystem>();
+        
     }
 
     void HitParticles()
